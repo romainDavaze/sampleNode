@@ -1,8 +1,9 @@
 var express = require('express'),
-    app = express();
+    app = express(),
+    windows1252 = require('windows-1252');
 
 app.get('/', (req, res) => {
-    console.log('\u2019');
+    console.log(windows1252.encode('’'));
     res.send('Logged character');
 });
 
